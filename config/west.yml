@@ -3,9 +3,9 @@ manifest:
     revision: v0.3
   remotes:
     - name: zmkfirmware
-      url_base: https://github.com/zmkfirmware
+      url-base: https://github.com/zmkfirmware
     - name: joelspadin
-      url_base: https://github.com/joelspadin
+      url-base: https://github.com/joelspadin
   projects:
     - name: zmk
       remote: zmkfirmware
