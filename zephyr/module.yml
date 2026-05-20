@@ -1,4 +1,4 @@
-name: wayfinder-module
+name: wayfinder
 build:
   settings:
     board_root: .
