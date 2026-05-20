@@ -1,9 +1,21 @@
 #include <dt-bindings/zmk/matrix_transform.h>
+#include <dt-bindings/zmk/outputs.h>
 
 / {
     chosen {
         zmk,kscan = &kscan0;
-        zmk,matrix_transform = &default_transform;
+        zmk,physical_layout = &physical_layout0;
+    };
+
+    layouts {
+        compatible = "zmk,physical-layouts";
+        
+        physical_layout0: physical_layout_0 {
+            compatible = "zmk,physical-layout";
+            display-name = "Default Layout";
+            transform = <&default_transform>;
+            kscan = <&kscan0>;
+        };
     };
 
     default_transform: keymap_transform_0 {
