@@ -1,6 +1,6 @@
 ---
 include:
-  - board: nice_nano/v2
+  - board: nice_nano/nrf52840/zmk
     shield: wayfinder_left
-  - board: nice_nano/v2
+  - board: nice_nano/nrf52840/zmk
     shield: wayfinder_right
