@@ -1,6 +1,5 @@
 name: wayfinder
 build:
+  cmake: .
   settings:
     board_root: .
-  include_dirs:
-    - include
