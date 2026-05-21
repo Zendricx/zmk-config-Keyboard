@@ -1,6 +1,0 @@
----
-include:
-  - board: nice_nano/v2
-    shield: wayfinder_left
-  - board: nice_nano/v2
-    shield: wayfinder_right
