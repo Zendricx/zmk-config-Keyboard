@@ -1,6 +1,6 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/locale/keys_de.h>
+#include <dt-bindings/zmk/locale/de.h>
 #include <dt-bindings/zmk/bt.h>
 
 / {
