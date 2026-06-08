@@ -1,8 +1,8 @@
 ---
 include:
   - board: nice_nano/nrf52840/zmk
-    shield: wayfinder_left nice_view
+    shield: wayfinder_left nice_view_custom
   - board: nice_nano/nrf52840/zmk
-    shield: wayfinder_right nice_view
+    shield: wayfinder_right nice_view_custom
   - board: nice_nano/nrf52840/zmk
     shield: settings_reset
