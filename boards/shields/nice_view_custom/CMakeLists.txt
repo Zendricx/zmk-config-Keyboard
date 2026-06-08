@@ -1,5 +1,5 @@
 if(CONFIG_ZMK_DISPLAY AND CONFIG_NICE_VIEW_WIDGET_STATUS)
-  set(NICE_VIEW_BASE ${ZEPHYR_ZMK_MODULE_DIR}/app/boards/shields/nice_view)
+  set(NICE_VIEW_BASE ${CMAKE_SOURCE_DIR}/boards/shields/nice_view)
 
   zephyr_library_include_directories(${CMAKE_SOURCE_DIR}/include)
   zephyr_library_sources(${NICE_VIEW_BASE}/custom_status_screen.c)
