@@ -4,13 +4,21 @@
 #include <dt-bindings/zmk/bt.h>
 
 / {
+        macros {
+                bt_clr_macro: bt_clr_macro {
+                        compatible = "zmk,behavior-macro";
+                        #binding-cells = <0>;
+                        bindings = <&bt BT_CLR>;
+                };
+        };
+
         behaviors {
                 bt_clr_safe: bt_clr_safe {
                         compatible = "zmk,behavior-hold-tap";
                         #binding-cells = <0>;
                         flavor = "hold-preferred";
                         tapping-term-ms = <600>;
-                        bindings = <&none>, <&bt BT_CLR>;
+                        bindings = <&none>, <&bt_clr_macro>;
                 };
         };
 
