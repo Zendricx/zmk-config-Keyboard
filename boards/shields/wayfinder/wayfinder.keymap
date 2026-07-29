@@ -15,7 +15,7 @@
         behaviors {
                 bt_clr_safe: bt_clr_safe {
                         compatible = "zmk,behavior-hold-tap";
-                        #binding-cells = <0>;
+                        #binding-cells = <2>;
                         flavor = "hold-preferred";
                         tapping-term-ms = <600>;
                         bindings = <&none>, <&bt_clr_macro>;
@@ -48,7 +48,7 @@
 // |  CTRL |       |       |       |       |       |          |   |   |   _   |   ?   |   !   |       |       |
 //                 | GUI   | ALT   |       | SPC   |          | SPC   |       |  ALT  |  SHFT |
                         bindings = <
-     &kp DE_GRAVE &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4         &kp DE_AMPS     &kp DE_FSLH     &kp DE_BSLH  &kp DE_ASTRK    &kp DE_EQUAL    &bt_clr_safe
+     &kp DE_GRAVE &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4         &kp DE_AMPS     &kp DE_FSLH     &kp DE_BSLH  &kp DE_ASTRK    &kp DE_EQUAL    &bt_clr_safe 0 0
      &kp TAB      &kp DE_LPAR  &kp DE_RPAR  &kp UP       &kp HOME     &kp END              &none           &kp DE_U_UMLAUT &kp DE_A_UMLAUT &kp DE_O_UMLAUT &kp DE_SZ       &kp PG_UP
      &kp LSHFT    &none        &kp LEFT     &kp DOWN     &kp RIGHT    &none                &kp DE_LBKT     &kp DE_RBKT     &kp DE_LBRC  &kp DE_RBRC     &kp DE_GT       &kp PG_DN
      &kp LCTRL    &none        &none        &none        &none        &none                &kp DE_PIPE     &kp DE_UNDER    &kp DE_QMARK &kp DE_EXCL     &none           &none
