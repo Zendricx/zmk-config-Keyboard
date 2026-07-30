@@ -11,9 +11,13 @@
 LV_IMG_DECLARE(bolt);
 
 void rotate_canvas(lv_obj_t *canvas) {
-    ARG_UNUSED(canvas);
-    // Temporarily disabled to isolate a crash - see debugging session.
-    // Display will render unrotated while this is stubbed out.
+    uint8_t *buf = lv_canvas_get_draw_buf(canvas)->data;
+    static uint8_t buf_copy[CANVAS_BUF_SIZE];
+    memcpy(buf_copy, buf, sizeof(buf_copy));
+
+    const uint32_t stride = lv_draw_buf_width_to_stride(CANVAS_SIZE, CANVAS_COLOR_FORMAT);
+    lv_draw_sw_rotate(buf_copy, buf, CANVAS_SIZE, CANVAS_SIZE, stride, stride,
+                      LV_DISPLAY_ROTATION_270, CANVAS_COLOR_FORMAT);
 }
 
 void draw_battery(lv_obj_t *canvas, const struct status_state *state) {
@@ -78,13 +82,13 @@ void canvas_draw_line(lv_obj_t *canvas, const lv_point_t points[], uint32_t poin
 
 void canvas_draw_rect(lv_obj_t *canvas, lv_coord_t x, lv_coord_t y, lv_coord_t w, lv_coord_t h,
                       lv_draw_rect_dsc_t *draw_dsc) {
-    lv_layer_t layer;
-    lv_canvas_init_layer(canvas, &layer);
-
-    lv_area_t coords = {x, y, x + w - 1, y + h - 1};
-    lv_draw_rect(&layer, draw_dsc, &coords);
-
-    lv_canvas_finish_layer(canvas, &layer);
+    ARG_UNUSED(canvas);
+    ARG_UNUSED(x);
+    ARG_UNUSED(y);
+    ARG_UNUSED(w);
+    ARG_UNUSED(h);
+    ARG_UNUSED(draw_dsc);
+    // Temporarily disabled to isolate a crash - see debugging session.
 }
 
 void canvas_draw_arc(lv_obj_t *canvas, lv_coord_t x, lv_coord_t y, lv_coord_t r,
