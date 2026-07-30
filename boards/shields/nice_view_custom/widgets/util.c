@@ -37,12 +37,6 @@ void draw_battery(lv_obj_t *canvas, const struct status_state *state) {
         lv_draw_image_dsc_init(&img_dsc);
         canvas_draw_img(canvas, 9, -1, &bolt, &img_dsc);
     }
-
-    char battery_text[5] = {};
-    snprintf(battery_text, sizeof(battery_text), "%d%%", state->battery);
-    lv_draw_label_dsc_t label_dsc;
-    init_label_dsc(&label_dsc, LVGL_FOREGROUND, &lv_font_unscii_8, LV_TEXT_ALIGN_LEFT);
-    canvas_draw_text(canvas, 0, 14, 33, &label_dsc, battery_text);
 }
 
 void init_label_dsc(lv_draw_label_dsc_t *label_dsc, lv_color_t color, const lv_font_t *font,
