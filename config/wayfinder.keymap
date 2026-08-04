@@ -4,19 +4,25 @@
 #include <dt-bindings/zmk/keys.h>
 
 / {
+    macros {
+        bt_clr_macro: bt_clr_macro {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&bt BT_CLR>;
+        };
+    };
+
     behaviors {
         bt_clr_safe: bt_clr_safe {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "hold-preferred";
             tapping-term-ms = <1000>;
-            bindings = <&bt_clr_safe >;
-            hold-trigger-key-positions = <11>;
+            bindings = <&bt_clr_macro>, <&none>;
         };
 
         hm: hm {
             compatible = "zmk,behavior-hold-tap";
-            label = "HM";
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
@@ -28,7 +34,6 @@
 
         bckspace_del: bckspace_del {
             compatible = "zmk,behavior-mod-morph";
-            label = "BCKSPACE_DEL";
             bindings = <&kp BACKSPACE>, <&kp DELETE>;
 
             #binding-cells = <0>;
