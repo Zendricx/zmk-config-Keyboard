@@ -53,11 +53,11 @@
             //              | GUI | ALT | LOW | SPC |     | SPC | LOW | ALT | SHFT|
 
             bindings = <
-&kp ESC    &kp N1    &kp N2    &kp N3    &kp N4       &kp N5       &kp N6     &kp N7       &kp N8       &kp N9          &kp N0              &kp BSPC
-&kp TAB    &kp Q     &kp W     &kp E     &kp R        &kp T        &kp DE_Z   &kp U        &kp I        &kp O           &kp P               &bckspace_del
-&kp LSHFT  &kp A     &kp S     &kp D     &hm LSHFT F  &hm LCTRL G  &kp H      &hm LSHFT J  &hm LCTRL K  &hm LEFT_ALT L  &hm LEFT_GUI DE_LT  &kp RET
-&kp LCTRL  &kp DE_Y  &kp X     &kp C     &kp V        &kp B        &kp N      &kp M        &kp COMMA    &kp DOT         &kp DE_MINUS        &kp DE_HASH
-                     &kp LGUI  &kp LALT  &mo 1        &kp SPACE    &kp SPACE  &mo 1        &kp RALT     &mo 2
+&kp ESC    &kp N1          &kp N2          &kp N3       &kp N4       &kp N5     &kp N6     &kp N7       &kp N8       &kp N9          &kp N0              &kp BSPC
+&kp TAB    &kp Q           &kp W           &kp E        &kp R        &kp T      &kp DE_Z   &kp U        &kp I        &kp O           &kp P               &bckspace_del
+&kp LSHFT  &hm LEFT_GUI A  &hm LEFT_ALT S  &hm LCTRL D  &hm LSHFT F  &kp G      &kp H      &hm LSHFT J  &hm LCTRL K  &hm LEFT_ALT L  &hm LEFT_GUI DE_LT  &kp RET
+&kp LCTRL  &kp DE_Y        &kp X           &kp C        &kp V        &kp B      &kp N      &kp M        &kp COMMA    &kp DOT         &kp DE_MINUS        &kp DE_HASH
+                           &kp LGUI        &kp LALT     &mo 1        &kp SPACE  &kp SPACE  &mo 1        &kp RALT     &mo 2
             >;
         };
 
@@ -71,7 +71,7 @@
 
             bindings = <
 &kp DE_GRAVE  &bt BT_SEL 0            &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4       &kp DE_AMPS  &kp DE_FSLH      &kp DE_BSLH      &kp DE_ASTRK     &kp DE_EQUAL  &bt_clr_safe 0 0
-&kp TAB       &kp DE_LPAR             &kp DE_RPAR   &kp UP        &kp HOME      &kp END            &none        &kp DE_U_UMLAUT  &kp DE_A_UMLAUT  &kp DE_O_UMLAUT  &kp DE_SZ     &kp PG_UP
+&kp TAB       &kp DE_LPAR             &kp DE_RPAR   &kp UP        &kp HOME      &kp END            &tog 3       &kp DE_U_UMLAUT  &kp DE_A_UMLAUT  &kp DE_O_UMLAUT  &kp DE_SZ     &kp PG_UP
 &kp LSHFT     &kp LS(LC(LEFT_ARROW))  &kp LEFT      &kp DOWN      &kp RIGHT     &kp LS(LC(RIGHT))  &kp DE_LBKT  &kp DE_RBKT      &kp DE_LBRC      &kp DE_RBRC      &kp DE_GT     &kp PG_DN
 &kp LCTRL     &none                   &none         &none         &none         &none              &kp DE_PIPE  &kp DE_UNDER     &kp DE_QMARK     &kp DE_EXCL      &none         &none
                                       &kp LGUI      &kp LALT      &none         &kp SPACE          &kp SPACE    &none            &kp RALT         &kp RSHFT
@@ -85,6 +85,16 @@
 &trans  &trans   &trans   &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans   &trans
 &trans  &trans   &trans   &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans   &trans
                  &trans   &trans  &trans  &trans  &trans  &trans  &trans  &trans
+            >;
+        };
+
+        layer_3 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans     &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans     &trans
+&trans  &kp A   &kp S   &kp D   &kp F   &trans  &trans  &kp J   &kp K   &kp L   &kp DE_LT  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans     &trans
+                &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
             >;
         };
     };
